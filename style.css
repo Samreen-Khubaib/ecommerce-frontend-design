@@ -1,0 +1,358 @@
+.header {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  height: 46px;
+  width: 150px;
+}
+
+.logo-img {
+  height: 100%;
+  width: auto; 
+}
+
+.brandtext {
+  font-size: 18px;
+  color: #8CB7F5;
+  font-weight: bold;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+   border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  border: 2px solid #0D6EFD;
+}
+
+.category-dropdown,
+.search-input,
+.search-btn {
+  height: 41px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+
+.category-dropdown {
+  border: none;
+  outline: none;
+  padding: 0 12px;
+  background-color: transparent;
+}
+
+
+.search-form input[type="text"] {
+  flex: 1;
+  padding: 10px 12px;
+  border: none;
+  outline: none;
+  width: 421px;
+}
+
+.search-form button {
+  background-color:#0D6EFD;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100px;
+}
+
+.icondiv {
+  width: 228px;
+  height: 41px;
+  display: flex;
+  justify-content: space-between;   
+  align-items: center;                       
+  color: #8B96A5;
+}
+
+.icon {
+  width: 37px;
+  height: 41px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  text-decoration: none; 
+  color: #8B96A5; 
+}
+
+.icon i {
+  font-size: 20px;                 
+  margin-bottom: 5px;
+}
+
+.icon span {
+  font-size: 12px;  
+  font-weight: 400; 
+  white-space: nowrap;
+               
+}
+
+  .topbar2 {
+  width:1440px;
+  height:56px;
+  top:86px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.nav-menu, .nav-options {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+   font:Inter;
+  font-weight:500;
+  font-style:Medium;
+  size:16px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  min-width: 160px;
+  z-index: 10;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f2f2f2;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.flag {
+  width: 20px;
+  height: auto;
+  vertical-align: middle;
+}
+
+
+.footer-container {
+  height: 190px;
+  background-color: aqua;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.main-footer {
+  background-color: #f8f9fa;
+  font-family: sans-serif;
+  color: #333;
+}
+
+.newsletter {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #f1f3f5;
+}
+
+.newsletter h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input {
+  padding: 8px 12px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.newsletter-form button {
+  background-color: #0d6efd;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 150px;
+}
+
+.brand-info {
+  flex: 2;
+}
+
+.footer-column h6 {
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #8b96a5;
+;
+}
+
+.social-icons i {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #8b96a5;
+}
+
+.app-btn {
+  width: 120px;
+  margin-top: 10px;
+}
+
+.footer-bottom {
+  background-color: #e9ecef;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom p{
+  color: #8b96a5;
+  margin-left: 90px;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+   margin-right: 80px;
+}
+
+.flag {
+  width: 20px;
+  height: auto;
+}
+
+.footerlogo {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  height: 46px;
+  width: 130px;
+  
+}
+
+.logo-footer {
+  height: 100%;
+  width: auto; 
+}
+
+
+.main{
+  width:1180px;
+  height:400px;
+  background-color: #8CB7F5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
