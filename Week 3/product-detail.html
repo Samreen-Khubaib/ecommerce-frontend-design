@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product-detail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="product-listing.css">
+    <link rel="stylesheet" href="product-detail.css">
+</head>
+<body>
+  <!--header-->
+  <div id="header-placeholder"></div>
+
+  <!-- Breadcrumb -->
+<div class="breadcrumb-container">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb-list">
+        <li>Home</li>
+        <li><span>&gt;</span></li>
+        <li>Clothing</li>
+        <li><span>&gt;</span></li>
+        <li>Men's wear</li>
+        <li><span>&gt;</span></li>
+        <li>Summer Clothing</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<div class="product-wrapper container">
+  <!-- Image Section -->
+  <div class="image-section">
+    <img src="images/clothmain.png" alt="Main Image" class="main-img">
+    <div class="thumbs">
+      <img src="images/clothmain.png" alt="thumb">
+      <img src="images/cloth1.jpg" alt="thumb">
+      <img src="images/cloth3.jpg" alt="thumb">
+      <img src="images/cloth2.jpg" alt="thumb">
+      <img src="images/cloth3.jpg" alt="thumb">
+      <img src="images/cloth1.jpg" alt="thumb">
+    </div>
+  </div>
+
+  <!-- Left: Product Info -->
+  <div class="product-card">
+    <div class="stock-status">✅ In stock</div>
+
+    <h2 class="product-title">Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle</h2>
+
+    <div class="rating-bar">
+      <span class="stars">★★★★☆ 9.3</span>
+      <span class="review-count">💬32 reviews</span>
+      <span class="sold-count">📦154 sold</span>
+    </div>
+
+    <div class="price-row">
+      <div class="price-col">
+        <span class="price red">$98.00</span>
+        <span class="pcs">50-100 pcs</span>
+      </div>
+      <div class="price-col">
+        <span class="price">$90.00</span>
+        <span class="pcs">100-700 pcs</span>
+      </div>
+      <div class="price-col">
+        <span class="price">$78.00</span>
+        <span class="pcs">700+ pcs</span>
+      </div>
+    </div>
+
+    <table class="product-details">
+      <tr><td>Price:</td><td>Negotiable</td></tr>
+      <tr><td>Type:</td><td>Classic shoes</td></tr>
+      <tr><td>Material:</td><td>Plastic material</td></tr>
+      <tr><td>Design:</td><td>Modern nice</td></tr>
+      <tr><td>Customization:</td><td>Customized logo and design custom packages</td></tr>
+      <tr><td>Protection:</td><td>Refund Policy</td></tr>
+      <tr><td>Warranty:</td><td>2 years full warranty</td></tr>
+    </table>
+
+    <div class="action-buttons">
+      <button class="add-to-cart"
+        onclick="addToCart()"
+        data-title="Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle"
+        data-price="78.00"
+        data-image="images/clothmain.png">
+  Add to Cart
+</button>
+
+    </div>
+  </div>
+
+<!-- Wrapper around the supplier card and save-later -->
+<div class="supplier-section-wrapper">
+  <div class="supplier-box">
+    <div class="supplier-top">
+      <div class="supplier-icon">R</div>
+      <div class="supplier-text">
+        <div class="supplier-label">Supplier</div>
+        <div class="supplier-name">Guanjoi Trading LLC</div>
+      </div>
+    </div>
+
+    <hr class="divider-top">
+
+    <div class="supplier-detail">🇩🇪 Germany, Berlin</div>
+    <div class="supplier-detail">🛡️ Verified Seller</div>
+    <div class="supplier-detail">🌐 Worldwide shipping</div>
+
+    <button class="supplier-btn primary">Send inquiry</button>
+    <button class="supplier-btn secondary">Seller's profile</button>
+  </div>
+
+  <div class="save-later">♡ Save for later</div>
+</div>
+
+</div>
+
+
+  <div class="container">
+    <!-- Main content area -->
+    <div class="main-content">
+<div class="tabs">
+  <div class="tab active" data-tab="description">Description</div>
+  <div class="tab" data-tab="reviews">Reviews</div>
+  <div class="tab" data-tab="shipping">Shipping</div>
+  <div class="tab" data-tab="about">About seller</div>
+</div>
+
+<!-- Tab Content Sections -->
+<div class="tab-content active" id="description">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+    Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+  </p>
+
+  <table class="des-table">
+    <tr><td>Model</td><td>#8786867</td></tr>
+    <tr><td>Style</td><td>Classic style</td></tr>
+    <tr><td>Certificate</td><td>ISO-898921212</td></tr>
+    <tr><td>Size</td><td>34mm x 450mm x 19mm</td></tr>
+    <tr><td>Memory</td><td>36GB RAM</td></tr>
+  </table>
+
+  <ul class="features">
+    <li>Some great feature name here</li>
+    <li>Lorem ipsum dolor sit amet, consectetur</li>
+    <li>Duis aute irure dolor in reprehenderit</li>
+    <li>Some great feature name here</li>
+  </ul>
+</div>
+
+<div class="tab-content" id="reviews">
+  <p>This is the Reviews tab content.</p>
+</div>
+
+<div class="tab-content" id="shipping">
+  <p>This is the Shipping tab content.</p>
+</div>
+
+<div class="tab-content" id="about">
+  <p>This is the About Seller tab content.</p>
+</div>
+
+
+    </div>
+
+    <!-- Side Recommendations -->
+    <div class="sidebar">
+      <h3>You may like</h3>
+      <ul class="recommendations">
+        <li>
+          <img src="images/19.jpg" alt="">
+          <div>
+            <p>Men Blazers Sets Elegant Formal</p>
+            <span>$7.00 - $99.50</span>
+          </div>
+        </li>
+        <li>
+          <img src="images/17.jpg" alt="">
+          <div>
+            <p>Men Shirt Sleeve Polo Contrast</p>
+            <span>$7.00 - $99.50</span>
+          </div>
+        </li>
+        <li>
+          <img src="images/18.jpg" alt="">
+          <div>
+            <p>Men Shirt Sleeve Polo Contrast</p>
+            <span>$7.00 - $99.50</span>
+          </div>
+        </li>
+         <li>
+          <img src="images/21.jpg" alt="">
+          <div>
+            <p>Women's Backpack</p>
+            <span>$7.00 - $99.50</span>
+          </div>
+        </li>
+         <li>
+          <img src="images/clothmain.png" alt="">
+          <div>
+            <p>Men Shirt Sleeve Polo Contrast</p>
+            <span>$7.00 - $99.50</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+<div class=" container related-products-section">
+  <h3>Related products</h3>
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="image-box">
+        <img src="images/20.jpg" alt="">
+      </div>
+      <p>Xiaomi Redmi 8 Original</p>
+      <span>$32.00–$40.00</span>
+    </div>
+    <!-- Repeat for each product -->
+    <div class="product-card">
+      <div class="image-box">
+        <img src="images/image 35.png" alt="">
+      </div>
+      <p>Xiaomi Redmi 8 Original</p>
+      <span>$32.00–$40.00</span>
+    </div>
+    <div class="product-card">
+      <div class="image-box">
+        <img src="images/11.jpg" alt="">
+      </div>
+      <p>Xiaomi Redmi 8 Original</p>
+      <span>$32.00–$40.00</span>
+    </div>
+    <div class="product-card">
+      <div class="image-box">
+        <img src="images/22.jpg" alt="">
+      </div>
+      <p>Xiaomi Redmi 8 Original</p>
+      <span>$32.00–$40.00</span>
+    </div>
+    <div class="product-card">
+      <div class="image-box">
+        <img src="images/13.jpg" alt="">
+      </div>
+      <p>Xiaomi Redmi 8 Original</p>
+      <span>$32.00–$40.00</span>
+    </div>
+    <div class="product-card">
+      <div class="image-box">
+        <img src="images/7.jpg" alt="">
+      </div>
+      <p>Xiaomi Redmi 8 Original</p>
+      <span>$32.00–$40.00</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- Banner Section -->
+<div class="container discount-banner">
+  <div class="banner-text">
+    <h3>Super discount on more than 100 USD</h3>
+    <p>Have you ever finally just write dummy info</p>
+  </div>
+  <button class="shop-btn">Shop now</button>
+</div>
+
+
+    <!-- footer-->
+  <div id="footer-placeholder"></div>
+</body>
+<script src="main.js"></script>
+<script src="product-listing.js"></script>
+<script src="product-detail.js"></script>
+
+</html>

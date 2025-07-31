@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product-listing.css">
+</head>
+<body>
+    <!--header-->
+  <div id="header-placeholder"></div>
+
+  <!-- Breadcrumb -->
+<div class="breadcrumb-container">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb-list">
+        <li>Home</li>
+        <li><span>&gt;</span></li>
+        <li>Clothing</li>
+        <li><span>&gt;</span></li>
+        <li>Men's wear</li>
+        <li><span>&gt;</span></li>
+        <li>Summer Clothing</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+
+<!--body-->
+  <div class="container " style="padding-bottom: 60px;">
+    <div class="row">
+
+      <!-- Sidebar Filters -->
+      <div class="col-md-3 sidebar">
+  <div class="filter-section" id="categorySection">
+    <div class="filter-title-wrapper" onclick="toggleSection('categorySection')">
+      <div class="filter-title">Category</div>
+      <div class="chevron">▾</div>
+    </div>
+    <div class="filter-content">
+      <ul class="list-unstyled">
+        <li><a href="#">Mobile accessory</a></li>
+        <li><a href="#">Electronics</a></li>
+        <li><a href="#">Smartphones</a></li>
+        <li><a href="#">Modern tech</a></li>
+        <li><a href="#" style="color: #0D6EFD;">See all</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="filter-section" id="brandsSection">
+    <div class="filter-title-wrapper" onclick="toggleSection('brandsSection')">
+      <div class="filter-title">Brands</div>
+      <div class="chevron">▾</div>
+    </div>
+    <div class="filter-content">
+      <form>
+        <div><input type="checkbox"> Samsung</div>
+        <div><input type="checkbox"> Apple</div>
+        <div><input type="checkbox"> Huawei</div>
+        <div><input type="checkbox"> Poco</div>
+        <div><input type="checkbox"> Lenovo</div>
+        <div class="see-all"><a href="#">See all</a></div>
+      </form>
+    </div>
+  </div>
+
+
+    <div class="filter-section" id="featureSection">
+    <div class="filter-title-wrapper" onclick="toggleSection('featureSection')">
+      <div class="filter-title">Features</div>
+      <div class="chevron">▾</div>
+    </div>
+    <div class="filter-content">
+      <form>
+        <div><input type="checkbox"> Metallic</div>
+        <div><input type="checkbox"> Plastic Cover</div>
+        <div><input type="checkbox"> 8GB RAM</div>
+        <div><input type="checkbox"> Super Power</div>
+        <div><input type="checkbox"> Large Memory</div>
+        <div class="see-all"><a href="#">See all</a></div>
+      </form>
+    </div>
+  </div>  
+
+<div class="filter-section" id="priceRangeSection">
+  <div class="filter-title-wrapper" onclick="toggleSection('priceRangeSection')">
+    <div class="filter-title">Price Range</div>
+    <div class="chevron">▾</div>
+  </div>
+  <div class="filter-content">
+    <input type="range" class="range-slider" min="0" max="9999" step="100" id="priceRange">
+
+    <div class="price-inputs">
+      <div class="price-box">
+        <label for="minPrice">Min</label>
+        <input type="number" id="minPrice" placeholder="0" min="0" max="9999">
+      </div>
+      <div class="price-box">
+        <label for="maxPrice">Max</label>
+        <input type="number" id="maxPrice" placeholder="9999" min="0" max="9999">
+      </div>
+    </div>
+
+    <button class="apply-btn">Apply</button>
+  </div>
+</div>
+
+
+<!-- CONDITION SECTION -->
+<div class="filter-section" id="conditionSection">
+  <div class="filter-title-wrapper" onclick="toggleSection('conditionSection')">
+    <div class="filter-title">Condition</div>
+    <div class="chevron">▾</div>
+  </div>
+  <div class="filter-content">
+    <form>
+      <div><input type="radio" name="condition" checked> Any</div>
+      <div><input type="radio" name="condition"> Refurbished</div>
+      <div><input type="radio" name="condition"> Brand new</div>
+      <div><input type="radio" name="condition"> Old items</div>
+    </form>
+  </div>
+</div>
+
+<!-- RATINGS SECTION -->
+<div class="filter-section" id="ratingsSection">
+  <div class="filter-title-wrapper" onclick="toggleSection('ratingsSection')">
+    <div class="filter-title">Ratings</div>
+    <div class="chevron">▾</div>
+  </div>
+  <div class="filter-content">
+    <div class="text-warning mb-1">★★★★★</div>
+    <div class="text-warning mb-1">★★★★☆</div>
+    <div class="text-warning mb-1">★★★☆☆</div>
+  </div>
+</div>
+
+<div class="filter-section" id="Manufacturer">
+  <div class="filter-title-wrapper" onclick="toggleSection('Manufacturer')">
+    <div class="filter-title">Manufacturer</div>
+    <div class="chevron">▾</div>
+  </div>
+</div>
+
+
+ </div>
+
+      <!-- Product Listing -->
+<div class="col-md-9">
+<div class="d-flex justify-content-between align-items-center mb-3" style="background-color:white; border-radius: 3px;">
+  <h5>12,911 items in <strong id="categoryName">Mobile accessory</strong></h5>
+  <div class="d-flex align-items-center">
+    <input type="checkbox" id="verified" class="form-check-input me-2"> Verified only
+    <select class="form-select form-select-sm d-inline w-auto ms-2 me-3">
+      <option>Featured</option>
+      <option>Newest</option>
+      <option>Price Low to High</option>
+    </select>
+
+    <!-- Grid/List Toggle Buttons -->
+    <div>
+      <button id="gridView" class="btn btn-outline-secondary me-1" title="Grid View">
+        <i class="bi bi-grid-3x3-gap-fill"></i>
+      </button>
+      <button id="listView" class="btn btn-outline-secondary" title="List View">
+        <i class="bi bi-list-ul"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Grid View Layout (Add inside .col-md-9 where product cards go) -->
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" id="gridContainer">
+
+  <div class="col">
+    <div class="card h-100">
+      <img src="images/15.jpg" class="card-img-top" alt="Canon Camera">
+      <div class="card-body">
+        <h6 class="card-title">Canon Camera EOS 2000, Black 10x zoom</h6>
+        <p class="card-text text-danger fw-bold mb-1">$998.00 <span class="text-muted text-decoration-line-through fw-normal">$1128.00</span></p>
+        <p class="rating small text-warning">★ 7.5 · 154 orders · <span class="text-success">Free Shipping</span></p>
+      </div>
+      <div class="card-footer bg-white border-top-0 text-end">
+        <button class="btn btn-sm btn-light"><i class="bi bi-heart"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card h-100">
+      <img src="images/28.jpg" class="card-img-top" alt="Laptop">
+      <div class="card-body">
+        <h6 class="card-title">GoPro HERO6 4K Action Camera - Black</h6>
+        <p class="card-text text-danger fw-bold mb-1">$998.00</p>
+        <p class="rating small text-warning">★ 7.5 · 154 orders · <span class="text-success">Free Shipping</span></p>
+      </div>
+      <div class="card-footer bg-white border-top-0 text-end">
+        <button class="btn btn-sm btn-light"><i class="bi bi-heart"></i></button>
+      </div>
+    </div>
+  </div>
+
+    <div class="col">
+    <div class="card h-100">
+      <img src="images/16.jpg" class="card-img-top" alt="Laptop">
+      <div class="card-body">
+        <h6 class="card-title">GoPro HERO6 4K Action Camera - Black</h6>
+        <p class="card-text text-danger fw-bold mb-1">$998.00</p>
+        <p class="rating small text-warning">★ 7.5 · 154 orders · <span class="text-success">Free Shipping</span></p>
+      </div>
+      <div class="card-footer bg-white border-top-0 text-end">
+        <button class="btn btn-sm btn-light"><i class="bi bi-heart"></i></button>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="col">
+    <div class="card h-100">
+      <img src="images/7.png" class="card-img-top" alt="Laptop">
+      <div class="card-body">
+        <h6 class="card-title">GoPro HERO6 4K Action Camera - Black</h6>
+        <p class="card-text text-danger fw-bold mb-1">$998.00</p>
+        <p class="rating small text-warning">★ 7.5 · 154 orders · <span class="text-success">Free Shipping</span></p>
+      </div>
+      <div class="card-footer bg-white border-top-0 text-end">
+        <button class="btn btn-sm btn-light"><i class="bi bi-heart"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card h-100">
+      <img src="images/image 35.png" class="card-img-top" alt="Laptop">
+      <div class="card-body">
+        <h6 class="card-title">GoPro HERO6 4K Action Camera - Black</h6>
+        <p class="card-text text-danger fw-bold mb-1">$998.00</p>
+        <p class="rating small text-warning">★ 7.5 · 154 orders · <span class="text-success">Free Shipping</span></p>
+      </div>
+      <div class="card-footer bg-white border-top-0 text-end">
+        <button class="btn btn-sm btn-light"><i class="bi bi-heart"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card h-100">
+      <img src="images/11.jpg" class="card-img-top" alt="Laptop">
+      <div class="card-body">
+        <h6 class="card-title">GoPro HERO6 4K Action Camera - Black</h6>
+        <p class="card-text text-danger fw-bold mb-1">$998.00</p>
+        <p class="rating small text-warning">★ 7.5 · 154 orders · <span class="text-success">Free Shipping</span></p>
+      </div>
+      <div class="card-footer bg-white border-top-0 text-end">
+        <button class="btn btn-sm btn-light"><i class="bi bi-heart"></i></button>
+      </div>
+    </div>
+  </div>
+
+<div class="col">
+  <div class="card h-100 border-0 shadow-sm">
+    <img src="images/15.jpg" class="card-img-top" alt="Canon Camera">
+    <div class="card-body p-2">
+      <h6 class="card-title mb-1">Canon Camera EOS 2000</h6>
+      <div class="text-danger fw-bold">$998.00 <small class="text-muted text-decoration-line-through">$1128.00</small></div>
+      <small class="text-warning d-block">★ 7.5 · 154 orders</small>
+      <small class="text-success">Free Shipping</small>
+    </div>
+    <div class="card-footer bg-white border-0 text-end">
+      <button class="btn btn-sm btn-light"><i class="bi bi-heart"></i></button>
+    </div>
+  </div>
+</div>
+
+  <div class="col">
+    <div class="card h-100">
+      <img src="images/6.png" class="card-img-top" alt="Laptop">
+      <div class="card-body">
+        <h6 class="card-title">GoPro HERO6 4K Action Camera - Black</h6>
+        <p class="card-text text-danger fw-bold mb-1">$998.00</p>
+        <p class="rating small text-warning">★ 7.5 · 154 orders · <span class="text-success">Free Shipping</span></p>
+      </div>
+      <div class="card-footer bg-white border-top-0 text-end">
+        <button class="btn btn-sm btn-light"><i class="bi bi-heart"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card h-100">
+      <img src="images/7.png" class="card-img-top" alt="Laptop">
+      <div class="card-body">
+        <h6 class="card-title">GoPro HERO6 4K Action Camera - Black</h6>
+        <p class="card-text text-danger fw-bold mb-1">$998.00</p>
+        <p class="rating small text-warning">★ 7.5 · 154 orders · <span class="text-success">Free Shipping</span></p>
+      </div>
+      <div class="card-footer bg-white border-top-0 text-end">
+        <button class="btn btn-sm btn-light"><i class="bi bi-heart"></i></button>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+        
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <div>Show 
+            <select class="form-select d-inline w-auto mx-2">
+              <option>10</option>
+              <option>20</option>
+              <option>30</option>
+            </select>
+            items
+          </div>
+          <nav>
+            <ul class="pagination mb-0">
+              <li class="page-item disabled"><a class="page-link" href="#">‹</a></li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">›</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- footer-->
+  <div id="footer-placeholder"></div>
+
+</body>
+<script src="main.js"></script>
+<script src="product-listing.js"></script>
+</html>

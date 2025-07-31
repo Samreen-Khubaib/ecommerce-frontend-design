@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+  <div class="topbar container">
+
+    <div class="logo">
+      <img src="images/logo-colored.png" alt="Brand Logo" class="logo-img">
+    </div>
+
+    <!-- SEARCH FORM -->
+    <form class="search-form" id="searchForm">
+      <input type="text" class="search-input" id="searchInput" placeholder="Search..." />
+
+      <select class="category-dropdown" id="categoryDropdown" onchange="redirectToCategory(this)">
+        <option value="">All category</option>
+        <option value="automobile">Automobile</option>
+        <option value="clothes">Clothes and Wear</option>
+        <option value="home">Home Interior</option>
+        <option value="tech">Computer and Tech</option>
+        <option value="tools">Tools, Equipment</option>
+        <option value="sports">Sports and Outdoor</option>
+        <option value="pets">Animal and Pets</option>
+        <option value="machinery">Machinery and Tools</option>
+        <option value="more">More Category</option>
+      </select>
+
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+    <!-- ICONS -->
+    <div class="icondiv">
+      <a href="profile.html" class="icon">
+        <i class="bi bi-person-fill"></i>
+        <span>Profile</span>
+      </a>
+
+      <a href="messages.html" class="icon">
+        <i class="bi bi-chat-dots"></i>
+        <span>Message</span>
+      </a>
+
+      <a href="orders.html" class="icon">
+        <i class="bi bi-heart-fill"></i>
+        <span>Orders</span>
+      </a>
+
+      <a href="cart.html" class="icon">
+        <i class="bi bi-cart3"></i>
+        <span>My Cart</span>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- TOPBAR NAVIGATION -->
+  <div class="topbar2 container">
+
+    <ul class="nav-menu">
+      <li class="dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="category">
+          <i class="bi bi-list"></i> <span>All category</span>
+        </a>
+        <ul class="dropdown-menu" id="category">
+          <li><a href="product-listing.html?category=automobile">Automobile</a></li>
+          <li><a href="product-listing.html?category=clothes">Clothes and Wear</a></li>
+          <li><a href="product-listing.html?category=home">Home Interior</a></li>
+          <li><a href="product-listing.html?category=tech">Computer and Tech</a></li>
+          <li><a href="product-listing.html?category=tools">Tools, Equipment</a></li>
+          <li><a href="product-listing.html?category=sports">Sports and Outdoor</a></li>
+          <li><a href="product-listing.html?category=pets">Animal and Pets</a></li>
+          <li><a href="product-listing.html?category=machinery">Machinery and Tools</a></li>
+          <li><a href="product-listing.html?category=more">More Category</a></li>
+        </ul>
+      </li>
+
+      <li><a href="offers.html" class="nav-link">Hot offers</a></li>
+      <li><a href="gifts.html" class="nav-link">Gift boxes</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="menu.html" class="nav-link">Menu item</a></li>
+
+      <li class="dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="help">Help</a>
+        <ul class="dropdown-menu" id="help">
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="nav-options">
+      <li class="dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="lang">
+          English, USD
+        </a>
+        <ul class="dropdown-menu" id="lang">
+          <li><a href="#">English, USD</a></li>
+          <li><a href="#">Deutsch, EUR</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="ship">
+          Ship to <img src="https://flagcdn.com/w40/de.png" class="flag">
+        </a>
+        <ul class="dropdown-menu" id="ship">
+          <li><a href="#">Germany</a></li>
+          <li><a href="#">USA</a></li>
+          <li><a href="#">Pakistan</a></li>
+        </ul>
+      </li>
+    </ul>
+
+  </div>
+</header>
+
+<!-- ✅ Working JS for Search + Category -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("searchForm");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const keyword = document.getElementById("searchInput").value.trim();
+      const category = document.getElementById("categoryDropdown").value;
+
+      if (!keyword && !category) {
+        alert("Please enter a search term or select a category.");
+        return;
+      }
+
+      let url = "product-listing.html?";
+      if (keyword) url += `search=${encodeURIComponent(keyword)}`;
+      if (category) url += `${keyword ? "&" : ""}category=${encodeURIComponent(category)}`;
+
+      window.location.href = url;
+    });
+  });
+
+  function redirectToCategory(select) {
+    const keyword = document.getElementById("searchInput").value.trim();
+    const category = select.value;
+
+    if (!keyword && category) {
+      window.location.href = `product-listing.html?category=${encodeURIComponent(category)}`;
+    }
+  }
+</script>
+
+</body>
+</html>
